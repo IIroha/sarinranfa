@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Card Request Form</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js"></script> 
+
+<div class="form-container">
+        <h1>Bank Card Request Form</h1>
+        <h3>Branch: Testing to see if this work</h3>
+        
+        <!-- Form Starts -->
+        <form id="cardRequestForm">
+            <!-- Section I -->
+            <div class="section">
+                <div class="section-title">I. Request Type</div>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="requestType" value="newCard"> New Card</label>
+                    <label><input type="checkbox" name="requestType" value="cardReplacement"> Card Replacement</label>
+                </div>
+
+                <h3>Card Type:</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="cardType" value="nonPersonalized"> Non Personalized Card</label>
+                    <label><input type="checkbox" name="cardType" value="visaDebitBlue"> VISA Debit Blue Card</label>
+                    <label><input type="checkbox" name="cardType" value="visaDebitGold"> VISA Debit Gold Card</label>
+                </div>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="section">
+                <div class="section-title">Personal Information</div>
+                <div class="input-group">
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" id="customerName" name="customerName">
+                    <span class="error" id="customerNameError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="cifNumber">CIF Number:</label>
+                    <input type="text" id="cifNumber" name="cifNumber">
+                    <span class="error" id="cifNumberError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="text" id="contactNumber" name="contactNumber">
+                    <span class="error" id="contactNumberError"></span>
+                </div>
+            </div>
+
+            <!-- Account Information -->
+            <div class="section">
+                <div class="section-title">II. Link or Remove Account</div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mainAccountNumber">Main Account Number:</label>
+                        <input type="text" id="mainAccountNumber" name="mainAccountNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="section">
+                <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px;">Submit</button>
+            </div>
+        </form>
+        <div id="successMessage" class="success"></div>
+    </div>
+</body>
+</html>
